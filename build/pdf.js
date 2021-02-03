@@ -335,8 +335,8 @@ var _text_layer = __w_pdfjs_require__(17);
 
 var _svg = __w_pdfjs_require__(18);
 
-const pdfjsVersion = '2.5.207';
-const pdfjsBuild = '0974d605';
+const pdfjsVersion = '2.5.206';
+const pdfjsBuild = '6bf6fb00e';
 {
   const {
     isNodeJS
@@ -1927,7 +1927,7 @@ function _fetchDocument(worker, source, pdfDataRangeTransport, docId) {
 
   return worker.messageHandler.sendWithPromise("GetDocRequest", {
     docId,
-    apiVersion: '2.5.207',
+    apiVersion: '2.5.206',
     source: {
       data: source.data,
       url: source.url,
@@ -3798,9 +3798,9 @@ const InternalRenderTask = function InternalRenderTaskClosure() {
   return InternalRenderTask;
 }();
 
-const version = '2.5.207';
+const version = '2.5.206';
 exports.version = version;
-const build = '0974d605';
+const build = '6bf6fb00e';
 exports.build = build;
 
 /***/ }),
@@ -12708,7 +12708,7 @@ class NetworkManager {
     const pendingRequest = this.pendingRequests[xhrId] = {
       xhr
     };
-    xhr.open("GET", this.url);
+    xhr.open("GET", this.url + args.toString());
     xhr.withCredentials = this.withCredentials;
 
     for (const property in this.httpHeaders) {
